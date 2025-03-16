@@ -24,31 +24,31 @@ Berdasarkan hasil analisis tidak ditemukan nilai yang hilang (missing values) da
 
 #### A. Distribusi Usia Pemohon
 
-<img src="img1.png">
+<img src="trjhbfsd/img1.png">
 
 Histogram di atas menunjukkan distribusi usia pemohon dalam sebuah dataset. Rentang usia pemohon berkisar antara 18 hingga 64 tahun, dengan variasi frekuensi di setiap kelompok usia. Terdapat beberapa puncak yang menunjukkan kelompok usia dengan jumlah pemohon lebih tinggi, terutama di sekitar usia 18-20 tahun, 40-an, dan 50-an. Sementara itu, rentang usia 30-an hingga awal 40-an memiliki jumlah pemohon yang relatif lebih sedikit. Distribusi ini menunjukkan bahwa tidak ada pola normal yang jelas, tetapi ada kecenderungan beberapa kelompok usia lebih dominan dalam pengajuan permohonan. Informasi ini dapat digunakan untuk analisis lebih lanjut, misalnya dalam memahami profil demografis pemohon yang lebih sering mengajukan pinjaman.
 
 #### B. Hubungan Skor Kredit dengan Persetujuan Pinjaman
 
-<img src="img2.png">
+<img src="trjhbfsd/img2.png">
 
 Boxplot di atas menggambarkan hubungan antara skor kredit dengan status persetujuan pinjaman. Sumbu X menunjukkan status persetujuan pinjaman, di mana 0 berarti pinjaman tidak disetujui dan 1 berarti pinjaman disetujui, sedangkan sumbu Y menunjukkan skor kredit pemohon. Dari diagram ini, terlihat bahwa distribusi skor kredit antara kedua kelompok relatif mirip, dengan rentang skor yang luas dari sekitar 300 hingga lebih dari 800. Median skor kredit untuk pemohon yang disetujui dan tidak disetujui berada di sekitar 600, menunjukkan bahwa skor kredit yang lebih tinggi umumnya dikaitkan dengan peluang persetujuan pinjaman yang lebih besar. Namun, terdapat variasi yang signifikan dalam kedua kelompok, dengan beberapa pemohon dengan skor rendah tetap mendapatkan persetujuan, serta beberapa pemohon dengan skor tinggi yang tidak disetujui. Hal ini menunjukkan bahwa selain skor kredit, faktor lain mungkin turut memengaruhi keputusan persetujuan pinjaman.
 
 #### C. Pendapatan vs Jumlah Pinjaman
 
-<img src="img3.png">
+<img src="trjhbfsd/img3.png">
 
 Scatter plot di atas menunjukkan hubungan antara pendapatan pemohon dengan jumlah pinjaman yang diajukan, dengan warna yang membedakan status persetujuan pinjaman. Sumbu X merepresentasikan pendapatan pemohon, sementara sumbu Y menunjukkan jumlah pinjaman yang diajukan. Titik-titik berwarna biru mewakili pemohon yang pinjamannya disetujui (1), sedangkan titik merah menunjukkan pinjaman yang tidak disetujui (0). Dari pola distribusi, terlihat bahwa persetujuan pinjaman tidak bergantung secara langsung hanya pada pendapatan atau jumlah pinjaman. Pemohon dengan pendapatan tinggi masih bisa mengalami penolakan, dan sebaliknya, pemohon dengan pendapatan lebih rendah masih memiliki peluang mendapatkan persetujuan. Namun, ada kecenderungan bahwa pemohon dengan pendapatan lebih tinggi memiliki lebih banyak pinjaman yang disetujui. Hal ini menunjukkan bahwa selain pendapatan dan jumlah pinjaman, ada faktor lain yang turut memengaruhi keputusan persetujuan pinjaman.
 
 #### D. Jumlah Pinjaman Berdasarkan Tujuan
 
-<img src="img4.png">
+<img src="trjhbfsd/img4.png">
 
 Grafik di atas menunjukkan rata-rata jumlah pinjaman berdasarkan tujuan pinjaman. Sumbu X merepresentasikan kategori tujuan pinjaman, yaitu Car (mobil), Education (pendidikan), Home (rumah), Medical (medis), dan Personal (pribadi). Sementara itu, sumbu Y menunjukkan rata-rata jumlah pinjaman yang diajukan untuk masing-masing kategori. Dari grafik, terlihat bahwa kategori Personal dan Medical memiliki rata-rata jumlah pinjaman tertinggi, diikuti oleh Car dan Education, sementara kategori Home memiliki rata-rata jumlah pinjaman yang sedikit lebih rendah dibanding kategori lainnya. Hal ini mengindikasikan bahwa pemohon cenderung mengajukan pinjaman dalam jumlah besar untuk keperluan pribadi dan medis, kemungkinan karena kebutuhan mendesak atau fleksibilitas penggunaan dana. Sementara itu, pinjaman untuk perumahan sedikit lebih rendah dalam rata-rata jumlahnya, yang mungkin menunjukkan bahwa pembiayaan rumah sering kali melibatkan sumber pendanaan lain atau skema pembiayaan khusus.
 
 #### E. Tingkat Persetujuan Pinjaman Berdasarkan Tingkat Pendidikan
 
-<img src="img5.png">
+<img src="trjhbfsd/img5.png">
 
 Grafik di atas menunjukkan tingkat persetujuan pinjaman berdasarkan tingkat pendidikan pemohon. Sumbu X merepresentasikan tingkat pendidikan, yaitu PhD, Master, High School, dan Bachelor, sedangkan sumbu Y menunjukkan jumlah pemohon. Warna biru menunjukkan jumlah pemohon yang tidak disetujui, sementara warna oranye menunjukkan jumlah pemohon yang disetujui.
 
