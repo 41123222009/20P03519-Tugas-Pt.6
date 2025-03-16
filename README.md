@@ -1,6 +1,6 @@
 # Tugas-Tuning-Model
 
-Nama  : Iksan Nur Afiah
+Nama  : Iksan Nur Afiah\
 NIM   : 4112322009
 
 ## Dataset
@@ -51,6 +51,7 @@ Grafik di atas menunjukkan rata-rata jumlah pinjaman berdasarkan tujuan pinjaman
 <img src="img5.png">
 
 Grafik di atas menunjukkan tingkat persetujuan pinjaman berdasarkan tingkat pendidikan pemohon. Sumbu X merepresentasikan tingkat pendidikan, yaitu PhD, Master, High School, dan Bachelor, sedangkan sumbu Y menunjukkan jumlah pemohon. Warna biru menunjukkan jumlah pemohon yang tidak disetujui, sementara warna oranye menunjukkan jumlah pemohon yang disetujui.
+
 Dari grafik, terlihat bahwa pada setiap tingkat pendidikan, jumlah pinjaman yang disetujui lebih tinggi dibandingkan dengan yang tidak disetujui. Pemohon dengan tingkat pendidikan High School memiliki jumlah persetujuan pinjaman tertinggi, diikuti oleh Master dan Bachelor, sedangkan PhD memiliki jumlah pemohon yang relatif lebih sedikit tetapi tetap menunjukkan tingkat persetujuan yang tinggi. Hal ini dapat mengindikasikan bahwa tingkat pendidikan berkontribusi pada kemungkinan persetujuan pinjaman, tetapi bukan satu-satunya faktor penentu.
 
 ## 2. Pemrosesan Data 
@@ -59,6 +60,7 @@ Dari grafik, terlihat bahwa pada setiap tingkat pendidikan, jumlah pinjaman yang
 
 Label Encoding digunakan untuk mengonversi fitur kategorikal menjadi nilai numerik menggunakan `LabelEncoder()` dari `sklearn.preprocessing`.  
 Fitur yang dikenakan Label Encoding adalah:  
+
 1. `Education_Level` (Tingkat Pendidikan)
 2. `Loan_Purpose` (Tujuan Pinjaman)
 
@@ -66,15 +68,18 @@ Fitur yang dikenakan Label Encoding adalah:
 
 Feature Scaling digunakan untuk menstandarisasi fitur numerik menggunakan `StandardScaler` dari `sklearn.preprocessing`.  
 Fitur yang dikenakan Standard Scaling:  
+
 1. `Age` (Usia)
 2. `Income` (Pendapatan)
 3. `Credit_Score` (Skor Kredit) 
 4. `Loan_Amount` (Jumlah Pinjaman)
+5. 
 Metode StandardScaler bekerja dengan mengubah setiap fitur agar memiliki rata-rata (mean) 0 dan standar deviasi 1, sehingga distribusi data menjadi lebih seimbang.
 
 ### Bagi dataset menjadi training set (80%) dan testing set (20%).
 
 Dataset dibagi menjadi data training (80) dan data testing (20%) menggunakan `train_test_split`. 
+
 - X (Fitur): `Age`, `Income`, `Education_Level`, `Credit_Score`, `Loan_Amount`, `Loan_Purpose`. 
 - y (Target): `Loan_Approval` (status persetujuan pinjaman). 
 
@@ -83,6 +88,7 @@ Dataset dibagi menjadi data training (80) dan data testing (20%) menggunakan `tr
 ### Pilih minimal dua algoritma Machine Learning yang berbeda. Jelaskan alasan pemilihan tersebut.
 
 Berikut lima algoritma Machine Learning yang saya pilih, beserta alasan pemilihannya:
+
 1. Logistic Regression digunakan sebagai baseline karena sederhana, cepat, dan cocok untuk hubungan linear antara fitur dan target.  
 2. Decision Tree dipilih karena mudah dipahami, tidak memerlukan feature scaling, dan dapat menangani data non-linear, meskipun rentan terhadap overfitting.  
 3. Random Forest digunakan karena lebih stabil dan akurat dibanding Decision Tree, serta lebih tahan terhadap overfitting dengan metode ensemble.  
@@ -92,7 +98,9 @@ Berikut lima algoritma Machine Learning yang saya pilih, beserta alasan pemiliha
 ### Lakukan training model menggunakan dataset yang telah diproses.
 
 Proses pelatihan dan evaluasi model machine learning dilakukan dengan menggunakan data pelatihan (`X_train`, `y_train`) dan data uji (`X_test`, `y_test`). Dalam prosesnya, setiap model dalam dictionary `models` dilatih menggunakan metode `.fit()`, kemudian melakukan prediksi terhadap data uji dengan `.predict()`.  
+
 Setelah mendapatkan hasil prediksi, model dievaluasi menggunakan beberapa metrik performa, yaitu accuracy (akurasi), precision (presisi), recall, dan F1-score. Nilai dari setiap metrik tersebut dihitung dengan membandingkan hasil prediksi dengan nilai sebenarnya (`y_test`).  
+
 Hasil evaluasi dari masing-masing model kemudian disimpan dalam daftar `evaluation_results`, yang berisi nama model serta skor dari masing-masing metrik evaluasi. Data ini dapat digunakan untuk membandingkan performa berbagai model dan memilih yang terbaik.
 
 ## 4. Evaluasi Model 
@@ -108,6 +116,7 @@ Hasil evaluasi dari masing-masing model kemudian disimpan dalam daftar `evaluati
 | SVM                | 0.63     | 0.630000  | 1.000000 | 0.773006 |
 
 Output tersebut menampilkan hasil evaluasi berbagai model machine learning berdasarkan metrik Accuracy, Precision, Recall, dan F1 Score. Dari hasil evaluasi dapat dsimpulkan:
+
 * Logistic Regression dan SVM memiliki Recall tertinggi (1.0), menunjukkan bahwa model ini sangat baik dalam mendeteksi kelas positif.
 * Logistic Regression memiliki F1 Score tertinggi (0.7778), diikuti oleh SVM (0.7730), yang menunjukkan keseimbangan antara Precision dan Recall.
 * Decision Tree dan Random Forest memiliki nilai akurasi lebih rendah dibandingkan model lainnya.
@@ -123,6 +132,7 @@ Model dengan F1 Score tertinggi adalah Logistic Regression (0.7778), diikuti ole
 ### Gunakan Grid Search atau Random Search untuk mencari kombinasi hyperparameter terbaik. 
 
 Hyperparameter tuning menggunakan GridSearchCV akan digunakan pada model Logistic Regression digunakan untuk mencari kombinasi hyperparameter terbaik. Hyperparameter yang diuji:
+
 * C (regularization strength): [0.001, 0.01, 0.1, 1, 10, 100]
 * solver (metode optimasi): ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
 * max_iter (jumlah iterasi): [100, 1000, 2500, 5000]
