@@ -22,6 +22,8 @@ Berdasarkan hasil analisis tidak ditemukan nilai yang hilang (missing values) da
 
 #### A. 
 
+<img src="img1.png">
+
 ## 2. Pemrosesan Data 
 
 - Lakukan encoding pada fitur kategorikal 
